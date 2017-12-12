@@ -20,3 +20,5 @@ urlpatterns = [
     url(r'^movi/', include('movi.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
+
+
