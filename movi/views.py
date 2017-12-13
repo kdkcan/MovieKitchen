@@ -206,62 +206,103 @@ def index(request):
             s_t3Port = (data["results"][0]["popularity"])
             s_t3Port = float(s_t3Port)
 
-            responset = requests.get(
-                "http://api.twittercounter.com/?twitter_id=" + act1_t1tid + "&apikey=c33b19579300f938f57f5bd4ffe42551")
-            datat = responset.json()
-            act1_t1ts = (datat["followers_yesterday"])
-            act1_t1ts = float(act1_t1ts)
+            if act1_t1tid == "":
+                act1_t1ts = 50000.00
 
-            responset = requests.get(
-                "http://api.twittercounter.com/?twitter_id=" + act2_t1tid + "&apikey=c33b19579300f938f57f5bd4ffe42551")
-            datat = responset.json()
-            act2_t1ts = (datat["followers_yesterday"])
-            act2_t1ts = float(act2_t1ts)
+            else:
+                responset = requests.get(
+                    "http://api.twittercounter.com/?twitter_id=" + act1_t1tid + "&apikey=692d4f822384e3f429a4c998e4f91ad7")
+                datat = responset.json()
+                act1_t1ts = (datat["followers_yesterday"])
+                act1_t1ts = float(act1_t1ts)
 
-            responset = requests.get(
-                "http://api.twittercounter.com/?twitter_id=" + act3_t1tid + "&apikey=c33b19579300f938f57f5bd4ffe42551")
-            datat = responset.json()
-            act3_t1ts = (datat["followers_yesterday"])
-            act3_t1ts = float(act3_t1ts)
+            print act1_t1ts
 
-            responset = requests.get(
-                "http://api.twittercounter.com/?twitter_id=" + act1_t2tid + "&apikey=c33b19579300f938f57f5bd4ffe42551")
-            datat = responset.json()
-            act1_t2ts = (datat["followers_yesterday"])
-            act1_t2ts = float(act1_t2ts)
+            if act2_t1tid == "":
+                act2_t1ts = 50000.00
+            else:
+                responset = requests.get(
+                    "http://api.twittercounter.com/?twitter_id=" + act2_t1tid + "&apikey=692d4f822384e3f429a4c998e4f91ad7")
+                datat = responset.json()
+                act2_t1ts = (datat["followers_yesterday"])
+                act2_t1ts = float(act2_t1ts)
 
-            responset = requests.get(
-                "http://api.twittercounter.com/?twitter_id=" + act2_t2tid + "&apikey=c33b19579300f938f57f5bd4ffe42551")
-            datat = responset.json()
-            act2_t2ts = (datat["followers_yesterday"])
-            act2_t2ts = float(act2_t2ts)
+            if act3_t1tid == "":
+                act3_t1ts = 50000.00
 
-            responset = requests.get(
-                "http://api.twittercounter.com/?twitter_id=" + act3_t2tid + "&apikey=c33b19579300f938f57f5bd4ffe42551")
-            datat = responset.json()
-            act3_t2ts = (datat["followers_yesterday"])
-            act3_t2ts = float(act3_t2ts)
+            else:
+                responset = requests.get(
+                    "http://api.twittercounter.com/?twitter_id=" + act3_t1tid + "&apikey=692d4f822384e3f429a4c998e4f91ad7")
+                datat = responset.json()
+                act3_t1ts = (datat["followers_yesterday"])
+                act3_t1ts = float(act3_t1ts)
 
-            responset = requests.get(
-                "http://api.twittercounter.com/?twitter_id=" + act1_t3tid + "&apikey=c33b19579300f938f57f5bd4ffe42551")
-            datat = responset.json()
-            act1_t3ts = (datat["followers_yesterday"])
-            act1_t3ts = float(act1_t3ts)
+            if act1_t2tid == "":
+                act1_t2ts = 50000.00
 
-            responset = requests.get(
-                "http://api.twittercounter.com/?twitter_id=" + act2_t3tid + "&apikey=c33b19579300f938f57f5bd4ffe42551")
-            datat = responset.json()
-            act2_t3ts = (datat["followers_yesterday"])
-            act2_t3ts = float(act2_t3ts)
+            else:
+                responset = requests.get(
+                    "http://api.twittercounter.com/?twitter_id=" + act1_t2tid + "&apikey=692d4f822384e3f429a4c998e4f91ad7")
+                datat = responset.json()
+                act1_t2ts = (datat["followers_yesterday"])
+                act1_t2ts = float(act1_t2ts)
 
-            responset = requests.get(
-                "http://api.twittercounter.com/?twitter_id=" + act3_t3tid + "&apikey=c33b19579300f938f57f5bd4ffe42551")
-            datat = responset.json()
-            act3_t3ts = (datat["followers_yesterday"])
-            act3_t3ts = float(act3_t3ts)
+            if act2_t2tid == "":
+                act2_t2ts = 50000.00
+            else:
+
+                responset = requests.get(
+                    "http://api.twittercounter.com/?twitter_id=" + act2_t2tid + "&apikey=692d4f822384e3f429a4c998e4f91ad7")
+                datat = responset.json()
+                act2_t2ts = (datat["followers_yesterday"])
+                act2_t2ts = float(act2_t2ts)
+
+            if act3_t2tid == "":
+                act3_t2ts = 50000.00
+
+            else:
+                responset = requests.get(
+                    "http://api.twittercounter.com/?twitter_id=" + act3_t2tid + "&apikey=692d4f822384e3f429a4c998e4f91ad7")
+                datat = responset.json()
+                act3_t2ts = (datat["followers_yesterday"])
+                act3_t2ts = float(act3_t2ts)
+
+            if act1_t3tid == "":
+                act1_t3ts = 50000.00
+
+            else:
+                responset = requests.get(
+                    "http://api.twittercounter.com/?twitter_id=" + act1_t3tid + "&apikey=692d4f822384e3f429a4c998e4f91ad7")
+                datat = responset.json()
+                act1_t3ts = (datat["followers_yesterday"])
+                act1_t3ts = float(act1_t3ts)
+
+            if act2_t3tid == "":
+                act2_t3ts = 50000.00
+
+            else:
+                responset = requests.get(
+                    "http://api.twittercounter.com/?twitter_id=" + act2_t3tid + "&apikey=692d4f822384e3f429a4c998e4f91ad7")
+                datat = responset.json()
+                act2_t3ts = (datat["followers_yesterday"])
+                act2_t3ts = float(act2_t3ts)
+
+            if act3_t3tid == "":
+                act3_t3ts = 50000.00
+
+            else:
+                responset = requests.get(
+                    "http://api.twittercounter.com/?twitter_id=" + act3_t3tid + "&apikey=692d4f822384e3f429a4c998e4f91ad7")
+                datat = responset.json()
+                act3_t3ts = (datat["followers_yesterday"])
+                act3_t3ts = float(act3_t3ts)
+
 
         except Exception as e:  # This is the correct syntax
             return render(request, "main.html")
+
+
+
 
         # main criteria vector
         slidervalue1 = slider1  # cast/director
@@ -416,9 +457,9 @@ def index(request):
         y.append(finalResult.item(2,0))
 
         ax.plot(x, y, '*')
-        ax.text(float(b_t1), finalResult.item(0,0), "Team1 /n"+ str(finalResult.item(0,0)) , fontsize=10)
-        ax.text(float(b_t2), finalResult.item(0,0), "Team2  -  "+ str(finalResult.item(1,0)) , fontsize=10)
-        ax.text(float(b_t3), finalResult.item(0,0), "Team3  -  "+ str(finalResult.item(2,0)) , fontsize=10)
+        ax.text(float(b_t1), finalResult.item(0,0), "Team1\n" , fontsize=10)
+        ax.text(float(b_t2), finalResult.item(1,0), "Team2\n" , fontsize=10)
+        ax.text(float(b_t3), finalResult.item(2,0), "Team3\n" , fontsize=10)
         ax.set_ylabel("Success Rate", fontsize=15)
         ax.set_xlabel("Budget (in Millions)", fontsize=15)
 
